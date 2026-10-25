@@ -1,0 +1,42 @@
+# ===== 依赖 =====
+node_modules/
+**/node_modules/
+
+# ===== 构建产物 =====
+web/dist/
+dist/
+build/
+
+# ===== Electron 打包产物（安装包/绿色版改由 GitHub Release 发布，不进仓库）=====
+release/
+
+# ===== 桌面端内嵌运行时（Node/Python，体积大，需自行准备，见 README）=====
+runtime/
+
+# ===== 敏感配置 / 本地环境（含本机路径、JWT 密钥，禁止提交）=====
+.env
+.env.local
+*.local
+
+# ===== 本地数据库与用户数据 =====
+*.db
+*.sqlite
+*.sqlite3
+server/data/
+uploads/
+
+# ===== 日志 / 临时文件 =====
+*.log
+electron-dev.log
+fmtmp*/
+
+# ===== 系统/编辑器 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ===== Python 缓存 =====
+__pycache__/
+*.pyc

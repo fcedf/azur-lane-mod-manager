@@ -1,0 +1,51 @@
+/* 主页左侧分类标签：长按拖拽排序的全局样式 */
+
+/* 拖动期间禁止整页选中文本 */
+body.tag-dragging {
+  cursor: grabbing !important;
+  user-select: none !important;
+}
+body.tag-dragging * {
+  cursor: grabbing !important;
+}
+
+/* 跟随鼠标的半透明拖影 */
+.tag-drag-ghost {
+  position: fixed;
+  z-index: 4000;
+  pointer-events: none;
+  opacity: 0.85;
+  background: #dceaff;
+  border: 1px solid #a0cfff;
+  border-radius: 6px;
+  color: #1d6fe0;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(31, 111, 235, 0.28);
+  transform: scale(0.98);
+}
+
+/* 插入位置指示线 */
+#tag-drop-indicator {
+  position: fixed;
+  z-index: 4001;
+  height: 0;
+  border-top: 2px solid #409eff;
+  border-radius: 2px;
+  pointer-events: none;
+}
+#tag-drop-indicator::before,
+#tag-drop-indicator::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #409eff;
+}
+#tag-drop-indicator::before {
+  left: -4px;
+}
+#tag-drop-indicator::after {
+  right: -4px;
+}
