@@ -63,7 +63,8 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "文件管理系统"
+      "shortcutName": "文件管理系统",
+      "artifactName": "AzurLaneModManager-Setup-${version}.${ext}"
     }
   }
 }
